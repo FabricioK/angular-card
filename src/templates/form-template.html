@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-body menupagamento">
+        <div class="col-md-12">
+            <h2 class="titulos">Efetuar pagamento via Pagueveloz</h2>
+        </div>
+        <div class="col-md-4" style="padding-right: 0px;">
+            <ul style="padding-left: 0px;">
+                <li ng-repeat="a in listaBandeiras" ng-class="{'breadcrumb' : selected == a.Id}" title="{{a.Nome}}" ng-click="escolheOpcao(a.Id)">
+                    <input type="checkbox" ng-checked="selected == a.Id" disabled="disabled" />
+                    <img class="btn btn-default" ng-src="/api/v1/Portal/Controllers/Pagamento/ConsultaIconeBandeira/{{a.Id}}" height="auto;"
+                        width="40" />
+                    <b>{{a.Nome}}</b>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 breadcrumb" style="margin-top: 0px;" ng-show="selected">
+            <select ng-options="p in listaParcelas"></select>
+            <br /><br /><br /><br /><br /><br /><br />
+        </div>
+    </div>
+</div>

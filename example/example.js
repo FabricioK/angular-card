@@ -1,4 +1,4 @@
-angular.module('app', ['gavruk.card'])
+angular.module('app', ['pagueveloz.checkout'])
 
 .controller('ExampleCtrl', ['$scope', function($scope) {
 
